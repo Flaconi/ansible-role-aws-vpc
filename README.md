@@ -8,6 +8,16 @@ This role handles the creation of AWS VPC's
 
 * Ansible 2.5
 
+
+## Additional variables
+
+Additional variables that can be used (either as `host_vars`/`group_vars` or via command line args):
+
+| Variable          | Description                  |
+|-------------------|------------------------------|
+| `aws_vpc_profile` | Boto profile name to be used |
+
+
 ## Example definition
 
 #### Required parameter only

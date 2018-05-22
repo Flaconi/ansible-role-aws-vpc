@@ -1,0 +1,10 @@
+---
+
+###
+### Main entrypoint
+###
+- include_tasks: create_vpc.yml
+  vars:
+    vpc: "{{ item }}"
+  with_items:
+    - "{{ aws_vpc_vpcs }}"
