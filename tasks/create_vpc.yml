@@ -10,8 +10,8 @@
   ec2_vpc_net:
     # Fixed values
     state: present
-    purge_cidrs: Yes
-    multi_ok: No
+    purge_cidrs: True
+    multi_ok: False
     # Required values
     name: "{{ vpc.name }}"
     cidr_block: "{{ vpc.cidr }}"
