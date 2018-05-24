@@ -1,11 +1,5 @@
 ---
 
-# Returns:
-# * _aws_vpc_tags
-- include_tasks: _expand_key_val_dict.yml
-  vars:
-    key_val_dict: "{{ vpc.tags | default() }}"
-
 - name: ensure vpc is created
   ec2_vpc_net:
     # Fixed values
@@ -16,7 +10,7 @@
     name: "{{ vpc.name }}"
     cidr_block: "{{ vpc.cidr }}"
     # Optional values
-    tags: "{{ _aws_vpc_tags | default(omit) }}"
+    tags: "{{ vpc.tags | default({}) | get_attr('key', 'val') }}"
     region: "{{ vpc.region | default(aws_vpc_default_region | default(omit)) }}"
     aws_access_key: "{{ lookup('ENV', 'AWS_ACCESS_KEY') | default(omit) }}"
     aws_secret_key: "{{ lookup('ENV', 'AWS_SECRET_KEY') | default(omit) }}"
