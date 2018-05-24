@@ -1,0 +1,18 @@
+---
+
+- name: ensure vpc is created
+  ec2_vpc_net:
+    # Fixed values
+    state: present
+    purge_cidrs: True
+    multi_ok: False
+    # Required values
+    name: "{{ vpc.name }}"
+    cidr_block: "{{ vpc.cidr }}"
+    # Optional values
+    tags: "{{ vpc.tags | default({}) | get_attr('key', 'val') }}"
+    region: "{{ vpc.region | default(aws_vpc_default_region | default(omit)) }}"
+    aws_access_key: "{{ lookup('ENV', 'AWS_ACCESS_KEY') | default(omit) }}"
+    aws_secret_key: "{{ lookup('ENV', 'AWS_SECRET_KEY') | default(omit) }}"
+    security_token: "{{ lookup('ENV', 'AWS_SECURITY_TOKEN') | default(omit) }}"
+    profile: "{{ aws_vpc_profile | default(omit) }}"
