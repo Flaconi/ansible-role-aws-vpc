@@ -3,6 +3,8 @@
 This role handles the creation of AWS VPC's
 
 [![Build Status](https://travis-ci.org/Flaconi/ansible-role-aws-vpc.svg?branch=master)](https://travis-ci.org/Flaconi/ansible-role-aws-vpc)
+[![Version](https://img.shields.io/github/tag/Flaconi/ansible-role-aws-vpc.svg)](https://github.com/Flaconi/ansible-role-aws-vpc/tags)
+[![Ansible Galaxy](https://img.shields.io/ansible/role/d/25919.svg)](https://galaxy.ansible.com/Flaconi/aws-vpc/)
 
 ## Requirements
 
