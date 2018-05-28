@@ -13,9 +13,10 @@ This role handles the creation of AWS VPC's
 
 Additional variables that can be used (either as `host_vars`/`group_vars` or via command line args):
 
-| Variable          | Description                  |
-|-------------------|------------------------------|
-| `aws_vpc_profile` | Boto profile name to be used |
+| Variable                 | Description                  |
+|--------------------------|------------------------------|
+| `aws_vpc_profile`        | Boto profile name to be used |
+| `aws_vpc_default_region` | Default region to use        |
 
 
 ## Example definition
