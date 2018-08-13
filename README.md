@@ -9,6 +9,8 @@ This role handles the creation of AWS VPC's
 ## Requirements
 
 * Ansible 2.5
+* [botocore](https://pypi.org/project/botocore/)
+* [boto3](https://pypi.org/project/boto3/)
 
 
 ## Additional variables
