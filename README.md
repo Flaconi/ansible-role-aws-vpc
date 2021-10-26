@@ -8,7 +8,7 @@ This role handles the creation of AWS VPC's
 
 ## Requirements
 
-* Ansible 2.5
+* Ansible 2.6
 * [botocore](https://pypi.org/project/botocore/)
 * [boto3](https://pypi.org/project/boto3/)
 
@@ -92,5 +92,5 @@ make lint
 make test
 
 # Run integration tests with custom Ansible version
-make test ANSIBLE_VERSION=2.4
+make test ANSIBLE_VERSION=2.6
 ```
